@@ -22,6 +22,7 @@
   "homepage": "https://github.com/Armando2t/Testing_Framework#readme",
   "devDependencies": {
     "@types/jasmine": "^6.0.0",
+    "fast-check": "^4.8.0",
     "jasmine": "^6.3.0",
     "ts-node": "^10.9.2",
     "typescript": "^6.0.3"
