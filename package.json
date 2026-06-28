@@ -11,7 +11,7 @@
     "metricas:complejidad": "node -r ts-node/register scripts/metricas/generarComplejidadPruebas.ts",
     "metricas:estabilidad": "node -r ts-node/register scripts/metricas/detectarPruebasInestables.ts",
     "metricas:tiempo": "node -r ts-node/register scripts/metricas/analizarTiempoEjecucion.ts",
-    "test:coverage": "c8 --reporter=text --reporter=json-summary jasmine",
+    "test:coverage": "c8 --reporter=text --reporter=json-summary --reporter=lcov jasmine",
     "metricas:cobertura-defectos": "node -r ts-node/register scripts/metricas/generarRelacionCoberturaDefectos.ts",
     "combinatorio:generar": "node -r ts-node/register scripts/combinatorio/generarCasosCombinatorios.ts",
     "confiabilidad:reporte": "node -r ts-node/register scripts/confiabilidad/generarReporteConfiabilidad.ts"

@@ -1,0 +1,66 @@
+name: Pipeline de Testing Integral
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  testing-integral:
+    name: Validacion integral de testing
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar codigo del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Validar TypeScript
+        run: npx tsc --noEmit
+
+      - name: Ejecutar pruebas Jasmine
+        run: npm test
+
+      - name: Ejecutar cobertura
+        run: npm run test:coverage
+
+      - name: Generar casos combinatorios
+        run: npm run combinatorio:generar
+
+      - name: Generar metricas de complejidad
+        run: npm run metricas:complejidad
+
+      - name: Generar metricas de estabilidad
+        run: npm run metricas:estabilidad
+
+      - name: Generar metricas de tiempo
+        run: npm run metricas:tiempo
+
+      - name: Generar relacion cobertura-defectos
+        run: npm run metricas:cobertura-defectos
+
+      - name: Generar reporte de confiabilidad
+        run: npm run confiabilidad:reporte
+
+      - name: Ejecutar mutation testing
+        run: npm run test:mutation
+
+      - name: Publicar reportes como artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: reportes-testing-integral
+          path: |
+            reports/**
+            coverage/**
