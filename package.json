@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jasmine",
     "build": "tsc --noEmit",
-    "test:unit": "jasmine"
+    "test:unit": "jasmine",
+    "test:mutation": "stryker run"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,8 @@
   },
   "homepage": "https://github.com/Armando2t/Testing_Framework#readme",
   "devDependencies": {
+    "@stryker-mutator/core": "^9.6.1",
+    "@stryker-mutator/jasmine-runner": "^9.6.1",
     "@types/jasmine": "^6.0.0",
     "fast-check": "^4.8.0",
     "jasmine": "^6.3.0",
