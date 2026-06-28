@@ -1,0 +1,44 @@
+{
+  "nombreFlujo": "Procesamiento de pedidos codeless",
+  "descripcion": "Flujo declarativo sin codigo para validar pedidos con inventario y notificaciones.",
+  "tipo": "codeless-testing",
+  "herramientaReferencia": "TestCraft",
+  "modulo": "Pedidos",
+  "pasos": [
+    {
+      "orden": 1,
+      "accion": "seleccionar_producto",
+      "valor": "LAPTOP-001",
+      "descripcion": "Seleccionar producto a solicitar"
+    },
+    {
+      "orden": 2,
+      "accion": "ingresar_cantidad",
+      "valor": 2,
+      "descripcion": "Ingresar cantidad solicitada por el cliente"
+    },
+    {
+      "orden": 3,
+      "accion": "validar_stock",
+      "valorEsperado": true,
+      "descripcion": "Verificar que exista stock suficiente"
+    },
+    {
+      "orden": 4,
+      "accion": "procesar_pedido",
+      "valorEsperado": "Pedido aprobado correctamente",
+      "descripcion": "Procesar el pedido"
+    },
+    {
+      "orden": 5,
+      "accion": "validar_notificacion",
+      "valorEsperado": true,
+      "descripcion": "Verificar que se genere una notificacion"
+    }
+  ],
+  "resultadoEsperado": {
+    "pedidoAprobado": true,
+    "stockFinalEsperado": 3,
+    "notificacionEnviada": true
+  }
+}

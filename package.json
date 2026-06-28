@@ -13,7 +13,8 @@
     "metricas:tiempo": "node -r ts-node/register scripts/metricas/analizarTiempoEjecucion.ts",
     "test:coverage": "c8 --reporter=text --reporter=json-summary jasmine",
     "metricas:cobertura-defectos": "node -r ts-node/register scripts/metricas/generarRelacionCoberturaDefectos.ts",
-    "combinatorio:generar": "node -r ts-node/register scripts/combinatorio/generarCasosCombinatorios.ts"
+    "combinatorio:generar": "node -r ts-node/register scripts/combinatorio/generarCasosCombinatorios.ts",
+    "confiabilidad:reporte": "node -r ts-node/register scripts/confiabilidad/generarReporteConfiabilidad.ts"
   },
   "repository": {
     "type": "git",
