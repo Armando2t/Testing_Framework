@@ -1,0 +1,20 @@
+{
+  "fuente": "StrykerJS mutation testing",
+  "fechaReferencia": "2026-06-28",
+  "archivos": [
+    {
+      "archivo": "BusquedaBinaria.ts",
+      "mutantesTotales": 44,
+      "detectados": 39,
+      "sobrevivientes": 5,
+      "mutationScore": 88.64
+    },
+    {
+      "archivo": "ContratoBusquedaBinaria.ts",
+      "mutantesTotales": 50,
+      "detectados": 28,
+      "sobrevivientes": 22,
+      "mutationScore": 56.0
+    }
+  ]
+}
