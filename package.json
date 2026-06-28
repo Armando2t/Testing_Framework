@@ -7,7 +7,9 @@
     "test": "jasmine",
     "build": "tsc --noEmit",
     "test:unit": "jasmine",
-    "test:mutation": "stryker run"
+    "test:mutation": "stryker run",
+    "metricas:complejidad": "node -r ts-node/register scripts/metricas/generarComplejidadPruebas.ts",
+    "metricas:estabilidad": "node -r ts-node/register scripts/metricas/detectarPruebasInestables.ts"
   },
   "repository": {
     "type": "git",
