@@ -1,0 +1,29 @@
+{
+  "name": "testing_framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine",
+    "build": "tsc --noEmit",
+    "test:unit": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Armando2t/Testing_Framework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Armando2t/Testing_Framework/issues"
+  },
+  "homepage": "https://github.com/Armando2t/Testing_Framework#readme",
+  "devDependencies": {
+    "@types/jasmine": "^6.0.0",
+    "jasmine": "^6.3.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}
