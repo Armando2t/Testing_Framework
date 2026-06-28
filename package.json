@@ -9,7 +9,8 @@
     "test:unit": "jasmine",
     "test:mutation": "stryker run",
     "metricas:complejidad": "node -r ts-node/register scripts/metricas/generarComplejidadPruebas.ts",
-    "metricas:estabilidad": "node -r ts-node/register scripts/metricas/detectarPruebasInestables.ts"
+    "metricas:estabilidad": "node -r ts-node/register scripts/metricas/detectarPruebasInestables.ts",
+    "metricas:tiempo": "node -r ts-node/register scripts/metricas/analizarTiempoEjecucion.ts"
   },
   "repository": {
     "type": "git",
