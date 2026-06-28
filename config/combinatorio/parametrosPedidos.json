@@ -1,0 +1,7 @@
+{
+  "productos": ["LAPTOP-001", "MOUSE-001", "TECLADO-001"],
+  "stocksDisponibles": [0, 1, 5, 10],
+  "cantidadesSolicitadas": [-1, 0, 1, 2, 10],
+  "clientesValidos": [true, false],
+  "notificacionesDisponibles": [true, false]
+}

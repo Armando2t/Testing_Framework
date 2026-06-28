@@ -1,0 +1,30 @@
+{
+  "fuente": "Historial simulado de ejecuciones previas",
+  "escenarios": [
+    {
+      "tipoEscenario": "cantidad_invalida",
+      "ejecuciones": 10,
+      "fallos": 8
+    },
+    {
+      "tipoEscenario": "stock_insuficiente",
+      "ejecuciones": 12,
+      "fallos": 7
+    },
+    {
+      "tipoEscenario": "cliente_invalido",
+      "ejecuciones": 8,
+      "fallos": 5
+    },
+    {
+      "tipoEscenario": "notificacion_no_disponible",
+      "ejecuciones": 6,
+      "fallos": 3
+    },
+    {
+      "tipoEscenario": "pedido_normal",
+      "ejecuciones": 20,
+      "fallos": 1
+    }
+  ]
+}
