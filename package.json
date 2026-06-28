@@ -4,14 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine",
+    "test": "tsc && jasmine --config=jasmine-ci.mjs",
     "build": "tsc --noEmit",
     "test:unit": "jasmine",
     "test:mutation": "stryker run",
     "metricas:complejidad": "node -r ts-node/register scripts/metricas/generarComplejidadPruebas.ts",
     "metricas:estabilidad": "node -r ts-node/register scripts/metricas/detectarPruebasInestables.ts",
     "metricas:tiempo": "node -r ts-node/register scripts/metricas/analizarTiempoEjecucion.ts",
-    "test:coverage": "c8 --reporter=text --reporter=json-summary --reporter=lcov jasmine",
+    "test:coverage": "tsc && c8 --reporter=text --reporter=json-summary --reporter=lcov jasmine --config=jasmine-ci.mjs",
     "metricas:cobertura-defectos": "node -r ts-node/register scripts/metricas/generarRelacionCoberturaDefectos.ts",
     "combinatorio:generar": "node -r ts-node/register scripts/combinatorio/generarCasosCombinatorios.ts",
     "confiabilidad:reporte": "node -r ts-node/register scripts/confiabilidad/generarReporteConfiabilidad.ts"
