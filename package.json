@@ -14,7 +14,8 @@
     "test:coverage": "tsc && c8 --reporter=text --reporter=json-summary --reporter=lcov jasmine --config=jasmine-ci.mjs",
     "metricas:cobertura-defectos": "node -r ts-node/register scripts/metricas/generarRelacionCoberturaDefectos.ts",
     "combinatorio:generar": "node -r ts-node/register scripts/combinatorio/generarCasosCombinatorios.ts",
-    "confiabilidad:reporte": "node -r ts-node/register scripts/confiabilidad/generarReporteConfiabilidad.ts"
+    "confiabilidad:reporte": "node -r ts-node/register scripts/confiabilidad/generarReporteConfiabilidad.ts",
+    "confiabilidad:personalizado": "node -r ts-node/register scripts/confiabilidad/generarModeloPredictivoPersonalizado.ts"
   },
   "repository": {
     "type": "git",
